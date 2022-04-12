@@ -1,2 +1,2 @@
 # Bootcamp Spread - DIO
-Projetos realizados ao longo do Bootcamp
+Projetos realizados ao longo do Bootcamp.
