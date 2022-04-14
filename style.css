@@ -25,6 +25,7 @@ div img {
   max-width: 992px;
   margin: auto;
   width: 100%;
+  min-width: 32px;
 }
 
 header {
@@ -92,20 +93,20 @@ header .menu {
   transition: 250ms;
 }
 
-#quem-somos {
+#who-we-are {
   flex-direction: row-reverse;
   align-items: center;
   justify-content: space-between;
 }
 
-#quem-somos h2 {
+#who-we-are h2 {
   font-size: 32px;
   color: #122a57;
   display: flex;
   margin-bottom: 20px;
 }
 
-#quem-somos h2::before {
+#who-we-are h2::before {
   content: "";
   height: 50px;
   width: 5px;
@@ -115,12 +116,12 @@ header .menu {
   position: relative;
 }
 
-#quem-somos p {
+#who-we-are p {
   margin-bottom: 10px;
   width: 90%;
 }
 
-#quem-somos img {
+#who-we-are img {
   min-width: 450px;
 }
 
@@ -142,7 +143,7 @@ header .menu {
 
 .services-list {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 
 }
 
@@ -176,4 +177,151 @@ header .menu {
 .services-item a:hover {
   background-color: rgb(255, 123, 0);
   transition: 250ms;
+}
+
+#plans {
+flex-direction: column;
+min-height: 100vh;
+}
+
+#plans h2 {
+  font-size: 32px;
+  padding-top: 50px;
+}
+
+.plans-list {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.plan-item {
+  flex: 1;
+  border: 5px solid #122a57;
+  margin-right: 20px;
+  padding: 10px;
+  max-width: 240px;
+}
+
+.plan-item h3 {
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.plan-item h3::after {
+  content: "";
+  background-color: #122a57;
+  width: 100%;
+  height: 3px;
+  margin: 20px 0 20px 0;
+}
+
+.plan-item ul {
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.plan-item ul li {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.plan-item ul li::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #122a57;
+  margin-right: 10px;
+}
+
+.plan-item .button {
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.button {
+  background-color: #122a57;
+  color: white;
+  text-align: center;
+  border-radius: 30px;
+
+  display: block;
+
+  width: 220px;
+  height: 50px;
+  line-height: 50px;
+  margin: 25px 0 10px 0;
+
+  text-decoration: none;
+}
+
+.plan-item a:hover {
+  background-color: rgb(255, 123, 0);
+  transition: 250ms;
+}
+
+footer {
+  background-color: #122a57;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+footer .footer {
+  justify-content: center;
+  color: white;
+}
+
+
+/* MOBILE */
+
+@media(max-width: 992px) {
+  .flex-container {
+    flex-direction: column;
+  }
+
+  .presentation {
+    flex-direction: column-reverse;
+  }
+
+  .presentation .presentation-text {
+    width: 100%;
+  }
+
+  #who-we-are {
+    flex-direction: column-reverse;
+  }
+
+  #who-we-are {
+    min-width: 320px;
+    margin: auto;
+  }
+
+  .services-list {
+    flex-direction: column;
+  }
+
+  .services-item img {
+    width: 50%;
+    margin: auto;
+  }
+
+  .plans-list {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+
+  .plans-list .plan-item {
+    max-width: 90%;
+    margin: auto;
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }
